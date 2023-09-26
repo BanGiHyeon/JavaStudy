@@ -21,7 +21,7 @@ public class 배열_생성1 {
 			System.out.print((i+1)+"번째 학생 수학:");
 			math[i]=scan.nextInt();
 			
-			total[i]=kor[1]+eng[1]+math[1];
+			total[i]=kor[i]+eng[i]+math[i];
 			avg[i]=total[i]/3.0;
 		}
 		
