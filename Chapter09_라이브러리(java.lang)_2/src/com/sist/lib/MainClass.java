@@ -33,7 +33,7 @@ package com.sist.lib;
  *             => Math.메소드명()
  *             = *** random() => 리턴형(double=>0.0~0.99)
  *             = *** ceil() => 올림 => 총페이지 
- *   => StringBuffer : String을 봐완 => 문자열 결합시 최적화 
+ *   => StringBuffer : String을 보완 => 문자열 결합시 최적화 
  *             => *** append()
  *   => String : 문자열 관리하는 클래스 
  *  // 문제 풀이  
