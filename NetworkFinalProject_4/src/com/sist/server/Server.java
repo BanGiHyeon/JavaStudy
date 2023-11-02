@@ -127,6 +127,33 @@ public class Server implements Runnable{
 						messageAll(Function.WAITCHAT+"|["+name+"]"+data);
 					}
 					break;
+					case Function.INFO:
+					{
+						String yourid=st.nextToken();
+						for(Client client:waitVc)
+						{
+							if(yourid.equals(client.id))
+							{
+								messageTO(Function.INFO+"|"+client.id+"|"+client.name+"|"+client.sex);
+							}
+						}
+					}
+					break;
+					case Function.MSGSEND:
+					{
+						String yourid=st.nextToken();
+						String content=st.nextToken();
+						for(Client client:waitVc)
+						{
+							if(yourid.equals(client.id))
+							{
+								String msgStr=Function.MSGSEND+"|"+id+"|"+content;
+								client.messageTO(msgStr);
+								break;
+							}
+						}
+					}
+					break;
 					case Function.EXIT:
 					{
 						messageAll(Function.WAITCHAT+"|[알림 ☞] "+name+"님 퇴장하였습니다");
